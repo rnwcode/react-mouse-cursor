@@ -1,0 +1,33 @@
+* {cursor: none !important;}
+
+.rnw_mouse-cursor-wrapper {
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+.rnw_mouse-cursor-pointer {
+    position: absolute; 
+    z-index: 999;
+    background: transparent;
+    mix-blend-mode: difference;
+}
+
+.rnw_mouse-cursor-pointer:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+
+    top: -5px;
+    left: -5px;
+    transition: all 150ms ease-in-out;
+}
+
+.rnw_mouse-cursor-pointer.rnw_hover:after {
+    width: 30px;
+    height: 30px;
+    top: -15px;
+    left: -15px;
+}
